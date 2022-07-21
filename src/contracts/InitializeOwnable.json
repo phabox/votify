@@ -1,0 +1,538 @@
+{
+  "contractName": "InitializeOwnable",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/Studium/WS_2021/Blockchain/votingdapp/contracts/utilities/InitializeOwnable.sol\":\"InitializeOwnable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Studium/WS_2021/Blockchain/votingdapp/contracts/utilities/InitializeOwnable.sol\":{\"keccak256\":\"0xaf488c6f1d47e8e081517e7d7f02647630d682f4f202dda023efb087982f1d30\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a86280b5ba107c418e67da71fdd91b6f9b566820f03fadf44a478e9c3ff89fea\",\"dweb:/ipfs/QmXDB39GrgBH2xN7E8NTJniy6oB2bHZz5DyXqDYpBNVXSo\"]},\"/D/Studium/WS_2021/Blockchain/votingdapp/contracts/utilities/Ownable.sol\":{\"keccak256\":\"0x6437fe393982eb09ad0ef0ab2d91935733c736afcca9fbd66f61e1f47d41dfb3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0c6217c80444f6e4dd8a81698a516aa9aa3b3a7407843e7f885ced2c61460576\",\"dweb:/ipfs/QmSS5S4c84qJHeiTiSBSkcXjcjaTtb1WVP2wg1G6jKdQM8\"]},\"@openzeppelin/contracts/proxy/Initializable.sol\":{\"keccak256\":\"0xae7044b7c89ed74327b0979ae6f317c65d87b8d17a42d0c62d698d77d5de5511\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d676c978d8ecee5c4510f045b747d94f3a1381e39feb870d2675d5b6d45a371b\",\"dweb:/ipfs/QmUAokuHWPVAf14QkhPtSdYFyNa8HVje9CBEzwCcxH3xkP\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610294806100606000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063c4d66de81461006f575b600080fd5b6100436100b3565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100b16004803603602081101561008557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100d7565b005b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600060159054906101000a900460ff16806100f657506100f5610219565b5b8061010e5750600060149054906101000a900460ff16155b610163576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e815260200180610231602e913960400191505060405180910390fd5b60008060159054906101000a900460ff1615905080156101b4576001600060156101000a81548160ff0219169083151502179055506001600060146101000a81548160ff0219169083151502179055505b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080156102155760008060156101000a81548160ff0219169083151502179055505b5050565b6000803090506000813b905060008114925050509056fe496e697469616c697a61626c653a20636f6e747261637420697320616c726561647920696e697469616c697a6564a2646970667358221220b77957e2ed9431700461fc8836fde5a2b68847bbc7500772b6e220c7e76f9dad64736f6c634300060c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063c4d66de81461006f575b600080fd5b6100436100b3565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100b16004803603602081101561008557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100d7565b005b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600060159054906101000a900460ff16806100f657506100f5610219565b5b8061010e5750600060149054906101000a900460ff16155b610163576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e815260200180610231602e913960400191505060405180910390fd5b60008060159054906101000a900460ff1615905080156101b4576001600060156101000a81548160ff0219169083151502179055506001600060146101000a81548160ff0219169083151502179055505b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080156102155760008060156101000a81548160ff0219169083151502179055505b5050565b6000803090506000813b905060008114925050509056fe496e697469616c697a61626c653a20636f6e747261637420697320616c726561647920696e697469616c697a6564a2646970667358221220b77957e2ed9431700461fc8836fde5a2b68847bbc7500772b6e220c7e76f9dad64736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "314:228:5:-:0;;;;;;;;;;;;;350:10:7;342:5;;:18;;;;;;;;;;;;;;;;;;314:228:5;;;;;;",
+  "deployedSourceMap": "314:228:5:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;229:20:7;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;457:82:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;229:20:7;;;;;;;;;;;;:::o;457:82:5:-;1472:13:12;;;;;;;;;;;:33;;;;1489:16;:14;:16::i;:::-;1472:33;:50;;;;1510:12;;;;;;;;;;;1509:13;1472:50;1464:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1584:19;1607:13;;;;;;;;;;;1606:14;1584:36;;1634:14;1630:98;;;1680:4;1664:13;;:20;;;;;;;;;;;;;;;;;;1713:4;1698:12;;:19;;;;;;;;;;;;;;;;;;1630:98;527:6:5::1;519:5;::::0;:14:::1;;;;;;;;;;;;;;;;;;1754::12::0;1750:66;;;1800:5;1784:13;;:21;;;;;;;;;;;;;;;;;;1750:66;457:82:5;;:::o;1912:593:12:-;1960:4;2325:12;2348:4;2325:28;;2363:10;2468:4;2456:17;2450:23;;2497:1;2491:2;:7;2484:14;;;;1912:593;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.25 <0.7.0;\r\n\r\nimport \"./Ownable.sol\";\r\nimport \"@openzeppelin/contracts/proxy/Initializable.sol\";\r\n\r\n//expand the ownable contract so that the proxy can also set the owner\r\n/*\r\n* @title expand the ownable contract so that also the proxy can set the owner\r\n*/\r\ncontract InitializeOwnable is Ownable, Initializable {\r\n  /*\r\n  * @title initialize the owner\r\n  * Requirements: can only called once\r\n  */\r\n  function initialize(address _owner) public initializer {\r\n    owner = _owner;\r\n  }\r\n}\r\n",
+  "sourcePath": "D:\\Studium\\WS_2021\\Blockchain\\votingdapp\\contracts\\utilities\\InitializeOwnable.sol",
+  "ast": {
+    "absolutePath": "/D/Studium/WS_2021/Blockchain/votingdapp/contracts/utilities/InitializeOwnable.sol",
+    "exportedSymbols": {
+      "InitializeOwnable": [
+        921
+      ]
+    },
+    "id": 922,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 902,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:5"
+      },
+      {
+        "absolutePath": "/D/Studium/WS_2021/Blockchain/votingdapp/contracts/utilities/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 903,
+        "nodeType": "ImportDirective",
+        "scope": 922,
+        "sourceUnit": 985,
+        "src": "69:23:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/proxy/Initializable.sol",
+        "file": "@openzeppelin/contracts/proxy/Initializable.sol",
+        "id": 904,
+        "nodeType": "ImportDirective",
+        "scope": 922,
+        "sourceUnit": 1344,
+        "src": "94:57:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 905,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 984,
+              "src": "344:7:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$984",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 906,
+            "nodeType": "InheritanceSpecifier",
+            "src": "344:7:5"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 907,
+              "name": "Initializable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1343,
+              "src": "353:13:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Initializable_$1343",
+                "typeString": "contract Initializable"
+              }
+            },
+            "id": 908,
+            "nodeType": "InheritanceSpecifier",
+            "src": "353:13:5"
+          }
+        ],
+        "contractDependencies": [
+          984,
+          1343
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 921,
+        "linearizedBaseContracts": [
+          921,
+          1343,
+          984
+        ],
+        "name": "InitializeOwnable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 919,
+              "nodeType": "Block",
+              "src": "512:27:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 917,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 915,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 962,
+                      "src": "519:5:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 916,
+                      "name": "_owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 910,
+                      "src": "527:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "519:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 918,
+                  "nodeType": "ExpressionStatement",
+                  "src": "519:14:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "c4d66de8",
+            "id": 920,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 913,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 912,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1320,
+                  "src": "500:11:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "500:11:5"
+              }
+            ],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 911,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 910,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 920,
+                  "src": "477:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 909,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "477:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "476:16:5"
+            },
+            "returnParameters": {
+              "id": 914,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "512:0:5"
+            },
+            "scope": 921,
+            "src": "457:82:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 922,
+        "src": "314:228:5"
+      }
+    ],
+    "src": "33:511:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Studium/WS_2021/Blockchain/votingdapp/contracts/utilities/InitializeOwnable.sol",
+    "exportedSymbols": {
+      "InitializeOwnable": [
+        921
+      ]
+    },
+    "id": 922,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 902,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:5"
+      },
+      {
+        "absolutePath": "/D/Studium/WS_2021/Blockchain/votingdapp/contracts/utilities/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 903,
+        "nodeType": "ImportDirective",
+        "scope": 922,
+        "sourceUnit": 985,
+        "src": "69:23:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/proxy/Initializable.sol",
+        "file": "@openzeppelin/contracts/proxy/Initializable.sol",
+        "id": 904,
+        "nodeType": "ImportDirective",
+        "scope": 922,
+        "sourceUnit": 1344,
+        "src": "94:57:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 905,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 984,
+              "src": "344:7:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$984",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 906,
+            "nodeType": "InheritanceSpecifier",
+            "src": "344:7:5"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 907,
+              "name": "Initializable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1343,
+              "src": "353:13:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Initializable_$1343",
+                "typeString": "contract Initializable"
+              }
+            },
+            "id": 908,
+            "nodeType": "InheritanceSpecifier",
+            "src": "353:13:5"
+          }
+        ],
+        "contractDependencies": [
+          984,
+          1343
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 921,
+        "linearizedBaseContracts": [
+          921,
+          1343,
+          984
+        ],
+        "name": "InitializeOwnable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 919,
+              "nodeType": "Block",
+              "src": "512:27:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 917,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 915,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 962,
+                      "src": "519:5:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 916,
+                      "name": "_owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 910,
+                      "src": "527:6:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "519:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 918,
+                  "nodeType": "ExpressionStatement",
+                  "src": "519:14:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "c4d66de8",
+            "id": 920,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 913,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 912,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1320,
+                  "src": "500:11:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "500:11:5"
+              }
+            ],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 911,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 910,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 920,
+                  "src": "477:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 909,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "477:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "476:16:5"
+            },
+            "returnParameters": {
+              "id": 914,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "512:0:5"
+            },
+            "scope": 921,
+            "src": "457:82:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 922,
+        "src": "314:228:5"
+      }
+    ],
+    "src": "33:511:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2021-01-24T18:14:23.002Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

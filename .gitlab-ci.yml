@@ -1,0 +1,50 @@
+image: node:latest
+
+
+stages:
+  - build
+  - lint
+  - test
+  - coverage
+
+build_frontend:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 30 mins
+
+
+build_contracts:
+  stage: build
+  script:
+    - npm install truffle
+    - ./node_modules/truffle/build/cli.bundled.js compile
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 30 mins
+
+lint_frontend:
+  stage: lint
+  needs: 
+    - build_frontend
+  script:
+    - npm run lint
+
+test_contracts:
+  stage: test
+  needs:
+    - build_contracts
+  services:
+   - trufflesuite/ganache-cli
+  script:
+   - ./node_modules/truffle/build/cli.bundled.js migrate --network gitlab
+   - ./node_modules/truffle/build/cli.bundled.js test --network gitlab
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 30 mins
